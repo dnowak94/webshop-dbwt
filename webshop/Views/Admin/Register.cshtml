@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      @Html.ActionLink("Student registrieren", "RegisterStudent", "Admin", htmlAttributes:new { role = "button", @class = "btn btn-default" })
+      @Html.ActionLink("Mitarbeiter registrieren", "RegisterMitarbeiter", "Admin", htmlAttributes:new { role = "button", @class = "btn btn-default" })
+    </div>
+  </div>
+</div>

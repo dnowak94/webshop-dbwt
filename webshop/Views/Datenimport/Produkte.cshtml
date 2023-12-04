@@ -1,0 +1,15 @@
+﻿@model IEnumerable<webshop.Models.XmlProdukt>
+
+@foreach (var item in Model)
+{
+    <tr>
+      <td>
+        @Html.EditorForModel()
+      </td>
+      <td>
+        @{
+            Html.RenderPartial("Preise", item.preise);
+        }
+      </td>
+ </tr>
+}

@@ -1,0 +1,12 @@
+﻿@if (ViewBag.ErrorMessage != null)
+{
+    <text>
+      <div class="alert alert-danger" role="alert">
+        <strong>@ViewBag.ErrorMessage</strong>
+      </div>
+      @if (ViewBag.ErrorDescription != null)
+      {
+          <span class="help-block">@ViewBag.ErrorDescription</span>
+      }
+    </text>
+}

@@ -1,0 +1,60 @@
+﻿@using webshop.Models
+@model List<webshop.Models.LINQ.Produkt>
+
+@{
+    ViewBag.Title = "Produkte";
+}
+
+<h2>Produkte</h2>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      @{
+          Html.RenderPartial("_Login");
+      }
+    </div>
+    <!--rechte Seite-->
+    <div class="col-md-10 vertical-line">
+      <h3>Verfügbare Speisen (Bestseller)</h3>
+      <div class="row">
+        @{
+            int i = 1;
+            foreach (var item in Model)
+            {
+                <text>
+                  <div class="col-md-2 text-center">
+                    <div class="media">
+                      @{
+                          ViewBild bild = null;
+                          if (item.Bild != null)
+                          {
+                            bild = new ViewBild(item.Bild);
+                          }
+                      }
+                      @if (bild != null)
+                      {
+                          <img class="img-responsive img-thumbnail" src="@bild.Base64Representation" alt="@bild.Alt_Text" />
+                          <span class="caption">@bild.Unterschrift</span>
+                      }
+                      else
+                      {
+                          <img class="img-responsive img-thumbnail" src="~/images/kein-bild.gif" alt="kein Bild" />
+                      }
+                    </div>
+                    <p>@item.Name</p>
+                    @Html.ActionLink("Details", "Details", "Start", new { id = item.ID }, null)
+                  </div>
+                </text>
+                          if (i % 4 == 0)
+                          {
+                              @Html.Raw("</div>\n")
+                              @Html.Raw("<div class=\"row\">\n")
+                            }
+                            i++;
+                          }
+        }
+      </div>
+    </div>
+  </div>
+</div>

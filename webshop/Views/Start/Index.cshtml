@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid">
+  <div class="row">
+    <!--Bild-->
+    <div class="col-md-4">
+      <div class="media">
+        <img class="img-responsive" src="~/images/no_image.gif" alt="kein Bild" />
+      </div>
+    </div>
+    <!--rechte Seite-->
+    <div class="col-md-8">
+      <h2>e-Mensa.</h2>
+      @{
+        Html.RenderPartial("_LoggedIn");
+      }
+      <h3>Bestellen Sie Ihr Essen jetzt und geniessen Sie später</h3>
+      <div class="row push-down">
+        <div class="col-md-4">
+          <p>Neu hier und Student?</p>
+          <a href="@Url.Action("Register","Admin")" class="btn btn-default" role="button"><span class="glyphicon glyphicon-hand-right"></span> Registrieren</a>
+        </div>
+        <div class="col-md-4">
+          <p>Wieder hungrig?</p>
+          <a href="@Url.Action("Index","Login")" class="btn btn-default" role="button"><span class="glyphicon glyphicon-cutlery"></span> Anmelden</a>
+        </div>
+      </div>
+      <div class="row push-down">
+        <div class="col-md-8">
+          <p>e-Mensa ist im Beta-Stadium und kann aktuell nicht für Bestellungen in einer der vielen Mensen verwendet werden</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

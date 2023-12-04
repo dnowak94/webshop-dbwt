@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Praktikum" Class="PraktikumDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=SURFACE\SQLEXPRESS;Initial Catalog=Praktikum;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PraktikumConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Befreundet" Member="Befreundet">
+    <Type Name="Befreundet">
+      <Column Name="FK_FE_Nutzer1" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_FE_Nutzer2" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="FE_Nutzer_Befreundet" Member="FE_Nutzer" ThisKey="FK_FE_Nutzer1" OtherKey="ID" Type="FE_Nutzer" IsForeignKey="true" />
+      <Association Name="FE_Nutzer_Befreundet1" Member="FE_Nutzer1" ThisKey="FK_FE_Nutzer2" OtherKey="ID" Type="FE_Nutzer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Zutat" Member="Zutat">
+    <Type Name="Zutat">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Bezeichnung" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Zutat_hatZutat" Member="hatZutat" ThisKey="ID" OtherKey="FK_Zutat" Type="hatZutat" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[BE-Nutzer]" Member="BE_Nutzer">
+    <Type Name="BE_Nutzer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="E_Mail" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="letzterLogin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Stretch" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Algo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Salt" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Hash" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Association Name="BE_Nutzer_Bewertung" Member="Bewertung" ThisKey="ID" OtherKey="FK_BE_Nutzer" Type="Bewertung" />
+      <Association Name="BE_Nutzer_FE_Nutzer" Member="FE_Nutzer" ThisKey="ID" OtherKey="FK_BE_Nutzer" Type="FE_Nutzer" />
+      <Association Name="BE_Nutzer_hatRechte" Member="hatRechte" ThisKey="ID" OtherKey="FK_BE_Nutzer" Type="hatRechte" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bewertung" Member="Bewertung">
+    <Type Name="Bewertung">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_BE_Nutzer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sichtungen" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Bemerkung" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="Bewertung_Schreibt" Member="Schreibt" ThisKey="ID" OtherKey="FK_Bewertung" Type="Schreibt" />
+      <Association Name="BE_Nutzer_Bewertung" Member="BE_Nutzer" ThisKey="FK_BE_Nutzer" OtherKey="ID" Type="BE_Nutzer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bild" Member="Bild">
+    <Type Name="Bild">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Binärdaten" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Alt_Text" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Unterschrift" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Bild_Kategorie" Member="Kategorie" ThisKey="ID" OtherKey="FK_Bild" Type="Kategorie" />
+      <Association Name="Bild_Produkt" Member="Produkt" ThisKey="ID" OtherKey="FK_Bild" Type="Produkt" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[FE-Nutzer]" Member="FE_Nutzer">
+    <Type Name="FE_Nutzer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_BE_Nutzer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Aktiv" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="letzterLogin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Stretch" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Algo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Salt" Type="System.String" DbType="Char(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Hash" Type="System.String" DbType="Char(24) NOT NULL" CanBeNull="false" />
+      <Association Name="FE_Nutzer_Befreundet" Member="Befreundet" ThisKey="ID" OtherKey="FK_FE_Nutzer1" Type="Befreundet" />
+      <Association Name="FE_Nutzer_Befreundet1" Member="Befreundet1" ThisKey="ID" OtherKey="FK_FE_Nutzer2" Type="Befreundet" />
+      <Association Name="FE_Nutzer_FH_Angehörige" Member="FH_Angehörige" ThisKey="ID" OtherKey="FK_FE_Nutzer" Type="FH_Angehörige" Cardinality="One" />
+      <Association Name="FE_Nutzer_Gast" Member="Gast" ThisKey="ID" OtherKey="FK_FE_Nutzer" Type="Gast" Cardinality="One" />
+      <Association Name="FE_Nutzer_Kauft" Member="Kauft" ThisKey="ID" OtherKey="FK_FE_Nutzer" Type="Kauft" />
+      <Association Name="BE_Nutzer_FE_Nutzer" Member="BE_Nutzer" ThisKey="FK_BE_Nutzer" OtherKey="ID" Type="BE_Nutzer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[FH-Angehörige]" Member="FH_Angehörige">
+    <Type Name="FH_Angehörige">
+      <Column Name="FK_FE_Nutzer" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="E_Mail" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Fachbereich" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FH_Angehörige_Mitarbeiter" Member="Mitarbeiter" ThisKey="FK_FE_Nutzer" OtherKey="FK_FH_Angehörige" Type="Mitarbeiter" Cardinality="One" />
+      <Association Name="FH_Angehörige_Schreibt" Member="Schreibt" ThisKey="FK_FE_Nutzer" OtherKey="FK_FH_Angehörige" Type="Schreibt" />
+      <Association Name="FH_Angehörige_Student" Member="Student" ThisKey="FK_FE_Nutzer" OtherKey="FK_FH_Angehörige" Type="Student" Cardinality="One" />
+      <Association Name="FE_Nutzer_FH_Angehörige" Member="FE_Nutzer" ThisKey="FK_FE_Nutzer" OtherKey="ID" Type="FE_Nutzer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gast" Member="Gast">
+    <Type Name="Gast">
+      <Column Name="FK_FE_Nutzer" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="von" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="bis" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="FE_Nutzer_Gast" Member="FE_Nutzer" ThisKey="FK_FE_Nutzer" OtherKey="ID" Type="FE_Nutzer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hatRechte" Member="hatRechte">
+    <Type Name="hatRechte">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_BE_Nutzer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Rechte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BE_Nutzer_hatRechte" Member="BE_Nutzer" ThisKey="FK_BE_Nutzer" OtherKey="ID" Type="BE_Nutzer" IsForeignKey="true" />
+      <Association Name="Rechte_hatRechte" Member="Rechte" ThisKey="FK_Rechte" OtherKey="ID" Type="Rechte" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hatZutat" Member="hatZutat">
+    <Type Name="hatZutat">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Produkt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Zutat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Zutat_hatZutat" Member="Zutat" ThisKey="FK_Zutat" OtherKey="ID" Type="Zutat" IsForeignKey="true" />
+      <Association Name="Produkt_hatZutat" Member="Produkt" ThisKey="FK_Produkt" OtherKey="ID" Type="Produkt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kategorie" Member="Kategorie">
+    <Type Name="Kategorie">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Oberkategorie" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FK_Bild" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Bezeichnung" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Kategorie_Kategorie" Member="Kategorie2" ThisKey="ID" OtherKey="FK_Oberkategorie" Type="Kategorie" />
+      <Association Name="Kategorie_Produkt" Member="Produkt" ThisKey="ID" OtherKey="FK_Kategorie" Type="Produkt" />
+      <Association Name="Bild_Kategorie" Member="Bild" ThisKey="FK_Bild" OtherKey="ID" Type="Bild" IsForeignKey="true" />
+      <Association Name="Kategorie_Kategorie" Member="Kategorie1" ThisKey="FK_Oberkategorie" OtherKey="ID" Type="Kategorie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kauft" Member="Kauft">
+    <Type Name="Kauft">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Produkt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_FE_Nutzer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Zahlung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Endpreis" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Association Name="FE_Nutzer_Kauft" Member="FE_Nutzer" ThisKey="FK_FE_Nutzer" OtherKey="ID" Type="FE_Nutzer" IsForeignKey="true" />
+      <Association Name="Produkt_Kauft" Member="Produkt" ThisKey="FK_Produkt" OtherKey="ID" Type="Produkt" IsForeignKey="true" />
+      <Association Name="Zahlung_Kauft" Member="Zahlung" ThisKey="FK_Zahlung" OtherKey="ID" Type="Zahlung" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mitarbeiter" Member="Mitarbeiter">
+    <Type Name="Mitarbeiter">
+      <Column Name="FK_FH_Angehörige" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MA_Nummer" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Büro" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="FH_Angehörige_Mitarbeiter" Member="FH_Angehörige" ThisKey="FK_FH_Angehörige" OtherKey="FK_FE_Nutzer" Type="FH_Angehörige" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Preis" Member="Preis">
+    <Type Name="Preis">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Produkt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rolle" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Preis" Member="Preis1" Type="System.Decimal" DbType="Decimal(3,2) NOT NULL" CanBeNull="false" />
+      <Association Name="Produkt_Preis" Member="Produkt" ThisKey="FK_Produkt" OtherKey="ID" Type="Produkt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Produkt" Member="Produkt">
+    <Type Name="Produkt">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Kategorie" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Bild" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Beschreibung" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="von" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="bis" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Produkt_hatZutat" Member="hatZutat" ThisKey="ID" OtherKey="FK_Produkt" Type="hatZutat" />
+      <Association Name="Produkt_Kauft" Member="Kauft" ThisKey="ID" OtherKey="FK_Produkt" Type="Kauft" />
+      <Association Name="Produkt_Preis" Member="Preis" ThisKey="ID" OtherKey="FK_Produkt" Type="Preis" />
+      <Association Name="Produkt_Schreibt" Member="Schreibt" ThisKey="ID" OtherKey="FK_Produkt" Type="Schreibt" />
+      <Association Name="Bild_Produkt" Member="Bild" ThisKey="FK_Bild" OtherKey="ID" Type="Bild" IsForeignKey="true" />
+      <Association Name="Kategorie_Produkt" Member="Kategorie" ThisKey="FK_Kategorie" OtherKey="ID" Type="Kategorie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rechte" Member="Rechte">
+    <Type Name="Rechte">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tabelle" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Association Name="Rechte_hatRechte" Member="hatRechte" ThisKey="ID" OtherKey="FK_Rechte" Type="hatRechte" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Schreibt" Member="Schreibt">
+    <Type Name="Schreibt">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FK_Bewertung" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_Produkt" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FK_FH_Angehörige" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bewertung_Schreibt" Member="Bewertung" ThisKey="FK_Bewertung" OtherKey="ID" Type="Bewertung" IsForeignKey="true" />
+      <Association Name="FH_Angehörige_Schreibt" Member="FH_Angehörige" ThisKey="FK_FH_Angehörige" OtherKey="FK_FE_Nutzer" Type="FH_Angehörige" IsForeignKey="true" />
+      <Association Name="Produkt_Schreibt" Member="Produkt" ThisKey="FK_Produkt" OtherKey="ID" Type="Produkt" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Student">
+    <Type Name="Student">
+      <Column Name="FK_FH_Angehörige" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Matrikelnummer" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Studiengang" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="FH_Angehörige_Student" Member="FH_Angehörige" ThisKey="FK_FH_Angehörige" OtherKey="FK_FE_Nutzer" Type="FH_Angehörige" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Zahlung" Member="Zahlung">
+    <Type Name="Zahlung">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Betrag" Type="System.Decimal" DbType="Decimal(5,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Aut_Server" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="Zeitstempel" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Zahlung_Kauft" Member="Kauft" ThisKey="ID" OtherKey="FK_Zahlung" Type="Kauft" />
+    </Type>
+  </Table>
+</Database>

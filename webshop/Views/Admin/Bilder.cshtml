@@ -1,0 +1,47 @@
+﻿@model IEnumerable<webshop.Models.LINQ.Bild>
+
+@{
+    ViewBag.Title = "Bilder";
+    Layout = "~/Views/Shared/_LayoutBE.cshtml";
+}
+
+<h2>Bilder</h2>
+
+<p>
+  @Html.ActionLink("Create New", "Create", "Bilder")
+</p>
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.Title)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Alt_Text)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Unterschrift)
+    </th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model)
+  {
+      <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Alt_Text)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Unterschrift)
+        </td>
+        <td>
+          @Html.ActionLink("Edit", "Edit", "Bilder", null, new { id = item.ID }) |
+          @Html.ActionLink("Details", "Details", "Bilder", null, new { id = item.ID }) |
+          @Html.ActionLink("Delete", "Delete", "Bilder", null, new { id = item.ID })
+        </td>
+      </tr>
+  }
+
+</table>

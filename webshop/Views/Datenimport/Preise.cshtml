@@ -1,0 +1,16 @@
+﻿@model IEnumerable<webshop.Models.LINQ.Preis>
+
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.Preis1)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Rolle)
+    </th>
+  </tr>
+
+  @foreach (var item in Model) {
+    @Html.EditorForModel()
+  }
+</table>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="~/bootstrap/dist/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="~/bootstrap/dist/css/bootstrap-theme.css" type="text/css" />
+  <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+  <script src="~/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="~/bootstrap/js/dropdown.js"></script>
+  <script src="~/bootstrap/js/tab.js"></script>
+  <link rel="stylesheet" href="~/Views/Shared/stylesBE.css" type="text/css" />
+  <title>@ViewBag.Title</title>
+</head>
+<body>
+<div class="col-md-4">
+  <h1>e-Mensa Backend</h1>
+  <h2>Inhalt</h2>
+  <ul>
+    <li>
+      @Html.ActionLink("Produkte","Index","Produkte")
+    </li>
+    <li>
+      @*@Html.ActionLink("Kategorien", "Index","Kategorie")*@
+      <a href="#">Kategorien</a>
+    </li>
+    <li>
+      @Html.ActionLink("Bilder", "Index","Bilder")
+    </li>
+  </ul>
+  <ul>
+    <li>
+      @*@Html.ActionLink("Benutzer", "Index", "Benutzer")*@
+      <a href="#">Benutzer</a>
+    </li>
+    <li>
+      @Html.ActionLink("Datenimport","Index","Datenimport")
+    </li>
+  </ul>
+</div>
+<div class="col-md-8">
+  @RenderBody()
+</div>
+  
+</body>
+</html>

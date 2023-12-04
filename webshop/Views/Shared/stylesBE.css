@@ -1,0 +1,7 @@
+﻿body {
+    background-color: lightgrey;
+}
+.img-thumbnail {
+    max-height: 140px;
+    max-width: 140px;
+}

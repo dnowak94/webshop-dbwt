@@ -1,0 +1,48 @@
+﻿@model IEnumerable<webshop.Models.XmlKategorie>
+
+@{
+    ViewBag.Title = "XMLImport";
+    Layout = "~/Views/Shared/_LayoutBE.cshtml";
+}
+
+<h2>XMLImport</h2>
+
+@using (Html.BeginForm("XMLImport", "Datenimport", FormMethod.Post, new { enctype = "multipart/form-data", runat = "server", data_ajax = "false" }))
+{
+    @Html.AntiForgeryToken()
+    <table class="table">
+      @foreach (var item in Model)
+      {
+          @Html.EditorForModel()
+        foreach (var p in item.produkts)
+        {
+              <tr>
+                <td>
+                  @Html.EditorFor(x => p)
+                </td>
+                <td>
+                  <table class="table">
+                    <tr>
+                      <th>
+                        Preis
+                      </th>
+                      <th>
+                        Rolle
+                      </th>
+                    </tr>
+                    @foreach (var preis in p.preise)
+                    {
+                        @Html.EditorFor(pr => preis)
+                    }
+                  </table>
+                </td>
+              </tr>
+        }
+      }
+    </table>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="In die Datenbank schreiben" class="btn btn-default" />
+      </div>
+    </div>
+}

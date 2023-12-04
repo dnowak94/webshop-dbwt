@@ -1,0 +1,22 @@
+﻿
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+  <fieldset>
+    <legend>Login</legend>
+    <form method="post">
+      <div class="form-group-sm">
+        <input type="text" name="benutzername" placeholder="Benutzername" class="form-control">
+      </div>
+      <div class="form-group-sm">
+        <input type="password" name="passwort" placeholder="Passwort" class="form-control">
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="angemeldet_bleiben"> Angemeldet bleiben</label>
+      </div>
+      <div class="form-group-sm push-down">
+       @Html.ActionLink("Anmelden","Index","Login")
+      </div>
+    </form>
+  </fieldset>
+}

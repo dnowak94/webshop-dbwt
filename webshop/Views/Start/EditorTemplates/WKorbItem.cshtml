@@ -1,0 +1,15 @@
+﻿@model webshop.Models.WKorb.WKorbItem
+
+<tr>
+  <td>@Html.DisplayFor(model => model.ProduktName, new { htmlAttributes = new { @class = "form-control" } })</td>
+  <td>
+    <div class="form-group">
+      @Html.EditorFor(model => model.Anzahl, new { htmlAttributes = new { @class = "form-control" } })
+      @Html.ValidationMessageFor(model => model.Anzahl, "", new { @class = "text-danger" })
+    </div>
+  </td>
+  <td>
+    @Html.DisplayFor(model => model.Preis(Session["role"] != null ? Session["role"].ToString() : ""))
+  </td>
+  @Html.HiddenFor(model => model.ProduktId)
+</tr>

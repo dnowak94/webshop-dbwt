@@ -1,0 +1,50 @@
+﻿@model webshop.Models.Produkt
+
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+
+<div>
+    <h4>Produkt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beschreibung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beschreibung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kategorie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kategorie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Preis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Preis)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,109 @@
+﻿@using webshop.Models
+@model webshop.Models.Produkt
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      @{
+          Html.RenderPartial("_Login");
+      }
+      <div class="push-down">
+        <a class="btn btn-default" href="@Url.Action("Register","Admin")" role="button">Registrieren</a>
+      </div>
+    </div>
+    <!--Details-->
+    <div class="col-md-10 vertical-line">
+      <h3>Details für "@Model.Name"</h3>
+      <!--Bild-->
+      @{
+          ViewBild bild = null;
+          if (Model.Bild != null)
+          {
+            bild = new ViewBild(Model.Bild);
+          }
+      }
+      @if (bild != null)
+      {
+          <img class="img-responsive img-thumbnail" src="@bild.Base64Representation" alt="@bild.Alt_Text" />
+                          <span class="caption">@bild.Unterschrift</span>
+      }
+      else
+      {
+          <img class="img-responsive img-thumbnail" src="~/images/no_image.gif" alt="kein Bild" />
+      }
+      <p>@Model.Beschreibung</p>
+      <div class="row">
+        <!--Tabs-->
+        <div class="col-md-8">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#beschreibung" aria-controls="beschreibung" role="tab" data-toggle="tab">Beschreibung</a></li>
+            <li role="presentation"><a href="#zutaten" aria-controls="zutaten" role="tab" data-toggle="tab">Zutaten</a></li>
+            <li role="presentation"><a href="#bewertung" aria-controls="bewertung" role="tab" data-toggle="tab">Bewertung</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="beschreibung">
+              <p>@Model.Beschreibung</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="zutaten">
+              <p>Coming Soon</p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="bewertung">
+              <form action="http://149.201.48.80/playground/postdata.php" method="post" class="form-horizontal">
+                <div class="form-group">
+                  <label for="bemerkung" class="col-sm-2 control-label">Bemerkung</label>
+                  <div class="col-sm-10">
+                    <textarea name="bemerkung" id="bemerkung" class="form-control" cols="10" rows="5"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="benutzername" class="col-sm-2 control-label">Benutzername</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="benutzer" class="form-control" id="benutzername" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputBewertung" class="col-sm-2 control-label">Bewertung</label>
+                  <div class="col-sm-10">
+                    <select name="bewertung" id="inputBewertung" class="dropdowns">
+                      @for (int i = 1; i < 5; i++)
+                      {
+                          <option>@i</option>
+                      }
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-default">Bewertung abgeben</button>
+                <input type="hidden" name="matrikelnummer" value="3084953" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!--Preis-->
+        @if (Model.price != -1)
+        {
+          using (Html.BeginForm())
+          {
+                @Html.AntiForgeryToken()
+                <text>
+                  <div class="col-md-2">
+                    <h4>@Model.price</h4>
+                    <div class="form-group">
+                      <input type="number" name="anzahl" value="1" min="1" max="@int.MaxValue" class="form-control dropdowns"/>
+                    </div>
+                    <div class="form-group">
+                      <input type="hidden" name="produkt_id" value="@Model.ID"/>
+                      <input type="submit" value="Bestellen" class="btn btn-default"/>
+                    </div>
+                  </div>
+                </text>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+﻿@using webshop.Models
+@if (Session["authenticated"] != null && Session["authenticated"].ToString() != "")
+{
+  Login login = Login.Load((int) Session["authenticated"], Session["role"].ToString());
+    @:<p>Hallo, @login.Benutzername. Du bist als @Session["role"] angemeldet</p>
+}

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<webshop.Models.ViewBild>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBE.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+  @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+  <tr>
+    <th>
+      @Html.DisplayNameFor(model => model.Title)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Alt_Text)
+    </th>
+    <th>
+      @Html.DisplayNameFor(model => model.Unterschrift)
+    </th>
+    <th>Bild</th>
+    <th></th>
+  </tr>
+
+  @foreach (var item in Model)
+  {
+      <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Alt_Text)
+        </td>
+        <td>
+          @Html.DisplayFor(modelItem => item.Unterschrift)
+        </td>
+        <td>
+          <img src="@item.Base64Representation" alt="@item.Alt_Text" class="img-responsive img-thumbnail" />
+        </td>
+        <td>
+          @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+        </td>
+      </tr>
+  }
+
+</table>

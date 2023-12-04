@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8BCDA49-DBB9-4EB3-B60D-FEC2534D1F99}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>webshop</RootNamespace>
+    <AssemblyName>webshop</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\webshop.dll" />
+    <Content Include="bin\webshop.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Webpages.Deployment.dll" />
+    <Content Include="bin\System.Web.Webpages.dll" />
+    <Content Include="bin\System.Web.Webpages.Razor.dll" />
+    <Content Include="bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\dist\css\bootstrap.css" />
+    <Content Include="bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\dist\js\bootstrap.js" />
+    <Content Include="bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="bootstrap\dist\js\npm.js" />
+    <Content Include="bootstrap\docs\about.html" />
+    <Content Include="bootstrap\docs\apple-touch-icon.png" />
+    <Content Include="bootstrap\docs\assets\brand\bootstrap-outline.svg" />
+    <Content Include="bootstrap\docs\assets\brand\bootstrap-punchout.svg" />
+    <Content Include="bootstrap\docs\assets\brand\bootstrap-solid.svg" />
+    <Content Include="bootstrap\docs\assets\css\docs.min.css" />
+    <Content Include="bootstrap\docs\assets\css\ie10-viewport-bug-workaround.css" />
+    <Content Include="bootstrap\docs\assets\css\src\docs.css" />
+    <Content Include="bootstrap\docs\assets\css\src\pygments-manni.css" />
+    <Content Include="bootstrap\docs\assets\flash\ZeroClipboard.swf" />
+    <Content Include="bootstrap\docs\assets\img\components.png" />
+    <Content Include="bootstrap\docs\assets\img\devices.png" />
+    <Content Include="bootstrap\docs\assets\img\expo-lyft.jpg" />
+    <Content Include="bootstrap\docs\assets\img\expo-newsweek.jpg" />
+    <Content Include="bootstrap\docs\assets\img\expo-riot.jpg" />
+    <Content Include="bootstrap\docs\assets\img\expo-vogue.jpg" />
+    <Content Include="bootstrap\docs\assets\img\sass-less.png" />
+    <Content Include="bootstrap\docs\assets\js\ie-emulation-modes-warning.js" />
+    <Content Include="bootstrap\docs\assets\js\src\application.js" />
+    <Content Include="bootstrap\docs\assets\js\src\customizer.js" />
+    <Content Include="bootstrap\docs\assets\js\vendor\autoprefixer.js" />
+    <Content Include="bootstrap\docs\assets\js\vendor\less.min.js" />
+    <Content Include="bootstrap\docs\assets\js\vendor\uglify.min.js" />
+    <Content Include="bootstrap\docs\components.html" />
+    <Content Include="bootstrap\docs\customize.html" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap.css" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap\docs\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\docs\dist\js\bootstrap.js" />
+    <Content Include="bootstrap\docs\dist\js\bootstrap.min.js" />
+    <Content Include="bootstrap\docs\dist\js\npm.js" />
+    <Content Include="bootstrap\docs\examples\carousel\carousel.css" />
+    <Content Include="bootstrap\docs\examples\carousel\index.html" />
+    <Content Include="bootstrap\docs\examples\dashboard\dashboard.css" />
+    <Content Include="bootstrap\docs\examples\dashboard\index.html" />
+    <Content Include="bootstrap\docs\examples\grid\grid.css" />
+    <Content Include="bootstrap\docs\examples\grid\index.html" />
+    <Content Include="bootstrap\docs\examples\jumbotron\index.html" />
+    <Content Include="bootstrap\docs\examples\jumbotron\jumbotron.css" />
+    <Content Include="bootstrap\docs\examples\justified-nav\index.html" />
+    <Content Include="bootstrap\docs\examples\justified-nav\justified-nav.css" />
+    <Content Include="bootstrap\docs\examples\navbar-static-top\index.html" />
+    <Content Include="bootstrap\docs\examples\navbar-static-top\navbar-static-top.css" />
+    <Content Include="bootstrap\docs\examples\navbar\index.html" />
+    <Content Include="bootstrap\docs\examples\navbar\navbar.css" />
+    <Content Include="bootstrap\docs\examples\offcanvas\offcanvas.css" />
+    <Content Include="bootstrap\docs\examples\offcanvas\offcanvas.js" />
+    <Content Include="bootstrap\docs\examples\screenshots\blog.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\carousel.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\cover.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\dashboard.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\equal-height-columns.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\grid.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\jumbotron-narrow.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\jumbotron.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\justified-nav.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\navbar-fixed.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\navbar-static.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\navbar.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\non-responsive.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\offcanvas.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\sign-in.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\starter-template.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\sticky-footer-navbar.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\sticky-footer.jpg" />
+    <Content Include="bootstrap\docs\examples\screenshots\theme.jpg" />
+    <Content Include="bootstrap\docs\examples\signin\index.html" />
+    <Content Include="bootstrap\docs\examples\signin\signin.css" />
+    <Content Include="bootstrap\docs\examples\sticky-footer-navbar\index.html" />
+    <Content Include="bootstrap\docs\examples\sticky-footer-navbar\sticky-footer-navbar.css" />
+    <Content Include="bootstrap\docs\examples\sticky-footer\index.html" />
+    <Content Include="bootstrap\docs\examples\sticky-footer\sticky-footer.css" />
+    <Content Include="bootstrap\docs\examples\tooltip-viewport\tooltip-viewport.css" />
+    <Content Include="bootstrap\docs\favicon.ico" />
+    <Content Include="bootstrap\docs\getting-started.html" />
+    <Content Include="bootstrap\docs\index.html" />
+    <Content Include="bootstrap\docs\javascript.html" />
+    <Content Include="bootstrap\docs\migration.html" />
+    <Content Include="bootstrap\docs\robots.txt" />
+    <Content Include="bootstrap\docs\_includes\ads.html" />
+    <Content Include="bootstrap\docs\_includes\components\alerts.html" />
+    <Content Include="bootstrap\docs\_includes\components\badges.html" />
+    <Content Include="bootstrap\docs\_includes\components\breadcrumbs.html" />
+    <Content Include="bootstrap\docs\_includes\components\button-dropdowns.html" />
+    <Content Include="bootstrap\docs\_includes\components\button-groups.html" />
+    <Content Include="bootstrap\docs\_includes\components\dropdowns.html" />
+    <Content Include="bootstrap\docs\_includes\components\glyphicons.html" />
+    <Content Include="bootstrap\docs\_includes\components\input-groups.html" />
+    <Content Include="bootstrap\docs\_includes\components\jumbotron.html" />
+    <Content Include="bootstrap\docs\_includes\components\labels.html" />
+    <Content Include="bootstrap\docs\_includes\components\list-group.html" />
+    <Content Include="bootstrap\docs\_includes\components\media.html" />
+    <Content Include="bootstrap\docs\_includes\components\navbar.html" />
+    <Content Include="bootstrap\docs\_includes\components\navs.html" />
+    <Content Include="bootstrap\docs\_includes\components\page-header.html" />
+    <Content Include="bootstrap\docs\_includes\components\pagination.html" />
+    <Content Include="bootstrap\docs\_includes\components\panels.html" />
+    <Content Include="bootstrap\docs\_includes\components\progress-bars.html" />
+    <Content Include="bootstrap\docs\_includes\components\responsive-embed.html" />
+    <Content Include="bootstrap\docs\_includes\components\thumbnails.html" />
+    <Content Include="bootstrap\docs\_includes\components\wells.html" />
+    <Content Include="bootstrap\docs\_includes\css\buttons.html" />
+    <Content Include="bootstrap\docs\_includes\css\code.html" />
+    <Content Include="bootstrap\docs\_includes\css\forms.html" />
+    <Content Include="bootstrap\docs\_includes\css\grid.html" />
+    <Content Include="bootstrap\docs\_includes\css\helpers.html" />
+    <Content Include="bootstrap\docs\_includes\css\images.html" />
+    <Content Include="bootstrap\docs\_includes\css\less.html" />
+    <Content Include="bootstrap\docs\_includes\css\overview.html" />
+    <Content Include="bootstrap\docs\_includes\css\responsive-utilities.html" />
+    <Content Include="bootstrap\docs\_includes\css\sass.html" />
+    <Content Include="bootstrap\docs\_includes\css\tables.html" />
+    <Content Include="bootstrap\docs\_includes\css\type.html" />
+    <Content Include="bootstrap\docs\_includes\customizer-variables.html" />
+    <Content Include="bootstrap\docs\_includes\footer.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\accessibility.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\browser-device-support.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\community.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\disabling-responsiveness.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\download.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\examples.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\grunt.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\license.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\template.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\third-party-support.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\tools.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\translations.html" />
+    <Content Include="bootstrap\docs\_includes\getting-started\whats-included.html" />
+    <Content Include="bootstrap\docs\_includes\header.html" />
+    <Content Include="bootstrap\docs\_includes\js\affix.html" />
+    <Content Include="bootstrap\docs\_includes\js\alerts.html" />
+    <Content Include="bootstrap\docs\_includes\js\buttons.html" />
+    <Content Include="bootstrap\docs\_includes\js\carousel.html" />
+    <Content Include="bootstrap\docs\_includes\js\collapse.html" />
+    <Content Include="bootstrap\docs\_includes\js\dropdowns.html" />
+    <Content Include="bootstrap\docs\_includes\js\modal.html" />
+    <Content Include="bootstrap\docs\_includes\js\overview.html" />
+    <Content Include="bootstrap\docs\_includes\js\popovers.html" />
+    <Content Include="bootstrap\docs\_includes\js\scrollspy.html" />
+    <Content Include="bootstrap\docs\_includes\js\tabs.html" />
+    <Content Include="bootstrap\docs\_includes\js\tooltips.html" />
+    <Content Include="bootstrap\docs\_includes\js\transitions.html" />
+    <Content Include="bootstrap\docs\_includes\nav\about.html" />
+    <Content Include="bootstrap\docs\_includes\nav\components.html" />
+    <Content Include="bootstrap\docs\_includes\nav\css.html" />
+    <Content Include="bootstrap\docs\_includes\nav\customize.html" />
+    <Content Include="bootstrap\docs\_includes\nav\getting-started.html" />
+    <Content Include="bootstrap\docs\_includes\nav\javascript.html" />
+    <Content Include="bootstrap\docs\_includes\nav\main.html" />
+    <Content Include="bootstrap\docs\_includes\nav\migration.html" />
+    <Content Include="bootstrap\docs\_layouts\default.html" />
+    <Content Include="bootstrap\docs\_layouts\home.html" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\Gruntfile.js" />
+    <Content Include="bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="bootstrap\grunt\change-version.js" />
+    <Content Include="bootstrap\js\affix.js" />
+    <Content Include="bootstrap\js\alert.js" />
+    <Content Include="bootstrap\js\button.js" />
+    <Content Include="bootstrap\js\carousel.js" />
+    <Content Include="bootstrap\js\collapse.js" />
+    <Content Include="bootstrap\js\dropdown.js" />
+    <Content Include="bootstrap\js\modal.js" />
+    <Content Include="bootstrap\js\popover.js" />
+    <Content Include="bootstrap\js\scrollspy.js" />
+    <Content Include="bootstrap\js\tab.js" />
+    <Content Include="bootstrap\js\tests\index.html" />
+    <Content Include="bootstrap\js\tests\unit\affix.js" />
+    <Content Include="bootstrap\js\tests\unit\alert.js" />
+    <Content Include="bootstrap\js\tests\unit\button.js" />
+    <Content Include="bootstrap\js\tests\unit\carousel.js" />
+    <Content Include="bootstrap\js\tests\unit\collapse.js" />
+    <Content Include="bootstrap\js\tests\unit\dropdown.js" />
+    <Content Include="bootstrap\js\tests\unit\modal.js" />
+    <Content Include="bootstrap\js\tests\unit\phantom.js" />
+    <Content Include="bootstrap\js\tests\unit\popover.js" />
+    <Content Include="bootstrap\js\tests\unit\scrollspy.js" />
+    <Content Include="bootstrap\js\tests\unit\tab.js" />
+    <Content Include="bootstrap\js\tests\unit\tooltip.js" />
+    <Content Include="bootstrap\js\tests\vendor\jquery.min.js" />
+    <Content Include="bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="bootstrap\js\tests\visual\affix-with-sticky-footer.html" />
+    <Content Include="bootstrap\js\tests\visual\affix.html" />
+    <Content Include="bootstrap\js\tests\visual\alert.html" />
+    <Content Include="bootstrap\js\tests\visual\button.html" />
+    <Content Include="bootstrap\js\tests\visual\carousel.html" />
+    <Content Include="bootstrap\js\tests\visual\collapse.html" />
+    <Content Include="bootstrap\js\tests\visual\dropdown.html" />
+    <Content Include="bootstrap\js\tests\visual\modal.html" />
+    <Content Include="bootstrap\js\tests\visual\popover.html" />
+    <Content Include="bootstrap\js\tests\visual\scrollspy.html" />
+    <Content Include="bootstrap\js\tests\visual\tab.html" />
+    <Content Include="bootstrap\js\tests\visual\tooltip.html" />
+    <Content Include="bootstrap\js\tooltip.js" />
+    <Content Include="bootstrap\js\transition.js" />
+    <Content Include="bootstrap\package.js" />
+    <Content Include="Global.asax" />
+    <Content Include="images\no_image.gif" />
+    <Content Include="libman.json" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\DatePicker.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\Shared\styles.css" />
+    <Content Include="Views\Shared\stylesBE.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BenutzerController.cs" />
+    <Compile Include="Controllers\BilderController.cs" />
+    <Compile Include="Controllers\DatenimportController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProdukteController.cs" />
+    <Compile Include="Controllers\StartController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Base64.cs" />
+    <Compile Include="Models\MyBild.cs" />
+    <Compile Include="Models\DB.cs" />
+    <Compile Include="Models\DetailsWKorbItem.cs" />
+    <Compile Include="Models\FE_Nutzer.cs" />
+    <Compile Include="Models\FH_Angehörige.cs" />
+    <Compile Include="Models\LINQ\Praktikum.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Praktikum.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Mitarbeiter.cs" />
+    <Compile Include="Models\MyDB.cs" />
+    <Compile Include="Models\Nutzer.cs" />
+    <Compile Include="Models\PasswordStorage.cs" />
+    <Compile Include="Models\Produkt.cs" />
+    <Compile Include="Models\ProduktBild.cs" />
+    <Compile Include="Models\Register.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\ViewBild.cs" />
+    <Compile Include="Models\WKorb.cs" />
+    <Compile Include="Models\XML.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Admin\Register.cshtml" />
+    <Content Include="Views\Admin\RegisterMitarbeiter.cshtml" />
+    <Content Include="Views\Admin\RegisterStudent.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoggedIn.cshtml" />
+    <Content Include="Views\Shared\_Login.cshtml" />
+    <Content Include="Views\Shared\_Success.cshtml" />
+    <Content Include="Views\Start\Details.cshtml" />
+    <Content Include="Views\Start\Impressum.cshtml" />
+    <Content Include="Views\Start\Index.cshtml" />
+    <Content Include="Views\Start\Produkte.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="bootstrap\bower.json" />
+    <Content Include="bootstrap\CHANGELOG.md" />
+    <Content Include="bootstrap\CNAME" />
+    <Content Include="bootstrap\composer.json" />
+    <Content Include="bootstrap\CONTRIBUTING.md" />
+    <Content Include="bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bootstrap\docs\assets\css\docs.min.css.map" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap\docs\dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap\docs\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\docs\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\docs\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\docs\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bootstrap\docs\LICENSE" />
+    <Content Include="bootstrap\docs\_data\browser-bugs.yml" />
+    <Content Include="bootstrap\docs\_data\browser-features.yml" />
+    <Content Include="bootstrap\docs\_data\core-team.yml" />
+    <Content Include="bootstrap\docs\_data\glyphicons.yml" />
+    <Content Include="bootstrap\docs\_data\sass-team.yml" />
+    <Content Include="bootstrap\docs\_data\showcase.yml" />
+    <Content Include="bootstrap\docs\_data\translations.yml" />
+    <Content Include="bootstrap\docs\_plugins\bridge.rb" />
+    <Content Include="bootstrap\docs\_plugins\bugify.rb" />
+    <Content Include="bootstrap\docs\_pug\customizer-nav.pug" />
+    <Content Include="bootstrap\docs\_pug\customizer-variables.pug" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bootstrap\Gemfile" />
+    <Content Include="bootstrap\Gemfile.lock" />
+    <Content Include="bootstrap\grunt\configBridge.json" />
+    <Content Include="bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="bootstrap\ISSUE_TEMPLATE.md" />
+    <Content Include="bootstrap\js\tests\README.md" />
+    <Content Include="bootstrap\less\alerts.less" />
+    <Content Include="bootstrap\less\badges.less" />
+    <Content Include="bootstrap\less\bootstrap.less" />
+    <Content Include="bootstrap\less\breadcrumbs.less" />
+    <Content Include="bootstrap\less\button-groups.less" />
+    <Content Include="bootstrap\less\buttons.less" />
+    <Content Include="bootstrap\less\carousel.less" />
+    <Content Include="bootstrap\less\close.less" />
+    <Content Include="bootstrap\less\code.less" />
+    <Content Include="bootstrap\less\component-animations.less" />
+    <Content Include="bootstrap\less\dropdowns.less" />
+    <Content Include="bootstrap\less\forms.less" />
+    <Content Include="bootstrap\less\glyphicons.less" />
+    <Content Include="bootstrap\less\grid.less" />
+    <Content Include="bootstrap\less\input-groups.less" />
+    <Content Include="bootstrap\less\jumbotron.less" />
+    <Content Include="bootstrap\less\labels.less" />
+    <Content Include="bootstrap\less\list-group.less" />
+    <Content Include="bootstrap\less\media.less" />
+    <Content Include="bootstrap\less\mixins.less" />
+    <Content Include="bootstrap\less\mixins\alerts.less" />
+    <Content Include="bootstrap\less\mixins\background-variant.less" />
+    <Content Include="bootstrap\less\mixins\border-radius.less" />
+    <Content Include="bootstrap\less\mixins\buttons.less" />
+    <Content Include="bootstrap\less\mixins\center-block.less" />
+    <Content Include="bootstrap\less\mixins\clearfix.less" />
+    <Content Include="bootstrap\less\mixins\forms.less" />
+    <Content Include="bootstrap\less\mixins\gradients.less" />
+    <Content Include="bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="bootstrap\less\mixins\grid.less" />
+    <Content Include="bootstrap\less\mixins\hide-text.less" />
+    <Content Include="bootstrap\less\mixins\image.less" />
+    <Content Include="bootstrap\less\mixins\labels.less" />
+    <Content Include="bootstrap\less\mixins\list-group.less" />
+    <Content Include="bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="bootstrap\less\mixins\opacity.less" />
+    <Content Include="bootstrap\less\mixins\pagination.less" />
+    <Content Include="bootstrap\less\mixins\panels.less" />
+    <Content Include="bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="bootstrap\less\mixins\reset-text.less" />
+    <Content Include="bootstrap\less\mixins\resize.less" />
+    <Content Include="bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="bootstrap\less\mixins\size.less" />
+    <Content Include="bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="bootstrap\less\mixins\table-row.less" />
+    <Content Include="bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="bootstrap\less\modals.less" />
+    <Content Include="bootstrap\less\navbar.less" />
+    <Content Include="bootstrap\less\navs.less" />
+    <Content Include="bootstrap\less\normalize.less" />
+    <Content Include="bootstrap\less\pager.less" />
+    <Content Include="bootstrap\less\pagination.less" />
+    <Content Include="bootstrap\less\panels.less" />
+    <Content Include="bootstrap\less\popovers.less" />
+    <Content Include="bootstrap\less\print.less" />
+    <Content Include="bootstrap\less\progress-bars.less" />
+    <Content Include="bootstrap\less\responsive-embed.less" />
+    <Content Include="bootstrap\less\responsive-utilities.less" />
+    <Content Include="bootstrap\less\scaffolding.less" />
+    <Content Include="bootstrap\less\tables.less" />
+    <Content Include="bootstrap\less\theme.less" />
+    <Content Include="bootstrap\less\thumbnails.less" />
+    <Content Include="bootstrap\less\tooltip.less" />
+    <Content Include="bootstrap\less\type.less" />
+    <Content Include="bootstrap\less\utilities.less" />
+    <Content Include="bootstrap\less\variables.less" />
+    <Content Include="bootstrap\less\wells.less" />
+    <Content Include="bootstrap\LICENSE" />
+    <Content Include="bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="bootstrap\nuget\MyGet.ps1" />
+    <Content Include="bootstrap\package.json" />
+    <Content Include="bootstrap\README.md" />
+    <Content Include="bootstrap\_config.yml" />
+    <Content Include="Models\LINQ\Praktikum.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Praktikum.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Start\Temp.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Start\Test.cshtml" />
+    <Content Include="Views\Start\WKorb.cshtml" />
+    <Content Include="Views\Start\EditorTemplates\WKorbItem.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutBE.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Produkte.cshtml" />
+    <Content Include="Views\Admin\Bilder.cshtml" />
+    <Content Include="Views\Admin\EditorTemplates\Bild.cshtml" />
+    <Content Include="Views\Admin\EditorTemplates\Produkt.cshtml" />
+    <Content Include="Views\Produkte\Index.cshtml" />
+    <Content Include="Views\Produkte\Create.cshtml" />
+    <Content Include="Views\Produkte\Edit.cshtml" />
+    <Content Include="Views\Bilder\Index.cshtml" />
+    <Content Include="Views\Produkte\Delete.cshtml" />
+    <Content Include="Views\Bilder\Create.cshtml" />
+    <Content Include="Views\Bilder\Edit.cshtml" />
+    <Content Include="Views\Start\EditorTemplates\View.cshtml" />
+    <Content Include="Views\Bilder\EditorTemplates\MyBild.cshtml" />
+    <Content Include="Views\Bilder\Delete.cshtml" />
+    <Content Include="Views\Produkte\EditorTemplates\Produkt.cshtml" />
+    <Content Include="Views\Datenimport\Index.cshtml" />
+    <Content Include="Views\Datenimport\XMLImport.cshtml" />
+    <Content Include="Views\Datenimport\ProduktList.cshtml" />
+    <Content Include="Views\Datenimport\EditorTemplates\Preis.cshtml" />
+    <Content Include="Views\Datenimport\EditorTemplates\XmlProdukt.cshtml" />
+    <Content Include="Views\Datenimport\EditorTemplates\XmlKategorie.cshtml" />
+    <Content Include="Views\Datenimport\Preise.cshtml" />
+    <Content Include="Views\Datenimport\Produkte.cshtml" />
+    <Content Include="Views\Datenimport\XMLImport2.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bootstrap\docs\examples\blog\" />
+    <Folder Include="bootstrap\docs\examples\cover\" />
+    <Folder Include="bootstrap\docs\examples\jumbotron-narrow\" />
+    <Folder Include="bootstrap\docs\examples\navbar-fixed-top\" />
+    <Folder Include="bootstrap\docs\examples\non-responsive\" />
+    <Folder Include="bootstrap\docs\examples\starter-template\" />
+    <Folder Include="bootstrap\docs\examples\theme\" />
+    <Folder Include="Views\Benutzer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\LINQ\Praktikum.dbml.layout">
+      <DependentUpon>Praktikum.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63874</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63874/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

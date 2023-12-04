@@ -1,0 +1,36 @@
+﻿@model List<webshop.Models.WKorb.WKorbItem>
+
+@{
+    ViewBag.Title = "Warenkorb";
+}
+
+<h2>Warenkorb</h2>
+
+<table class="table">
+  <tr>
+    <th>
+      Produktname
+    </th>
+    <th>
+      Anzahl
+    </th>
+    <th>
+      Preis
+    </th>
+  </tr>
+  @using (Html.BeginForm("Checkout", "Start", FormMethod.Post, new { id = "warenkorbForm" }))
+  {
+      @Html.EditorForModel()
+      <tr>
+        <td>Summe</td>
+        <td></td>
+        @{ var wkorb = new webshop.Models.WKorb(Model, Session["role"] != null ? Session["role"].ToString() : ""); }
+        <td>
+          <div class="form-group">
+            @wkorb.GetSumme()
+            <input type="submit" value="Bestellen" class="btn btn-default" />
+          </div>
+        </td>
+      </tr>
+            }
+</table>

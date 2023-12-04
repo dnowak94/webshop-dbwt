@@ -1,0 +1,36 @@
+﻿@model IEnumerable<webshop.Models.Nutzer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBE.cshtml";
+}
+
+<h2>Letze Nutzeranmeldungen</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gruppe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zeitpunkt)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gruppe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zeitpunkt)
+        </td>
+    </tr>
+}
+
+</table>

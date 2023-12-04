@@ -1,0 +1,48 @@
+﻿/* Author: Dominik Nowak
+Matrikelnr: 3084953
+Datum: 03.11.2016 */
+
+.img-thumbnail {
+    max-height: 140px;
+    max-width: 140px;
+}
+
+footer {
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    margin-top:20px;
+}
+
+ul.navlinks, #searchbar {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul.navlinks > li ~ li {
+    border-left: 1px solid #9f9f9f;
+}
+
+a, a:hover,a:active {
+    color: #9f9f9f;
+    text-decoration: none;
+}
+a:hover {
+    color: #00b5ad;
+}
+
+.dropdowns {
+    width: 100px;
+}
+
+.vertical-line {
+    border-left: 2px solid black;
+}
+
+fieldset {
+    border: 1px solid black;
+}
+
+.push-down {
+    margin-top:50px;
+}
+

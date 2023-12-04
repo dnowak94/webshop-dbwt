@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>@ViewBag.Title</title>
+  <link rel="stylesheet" href="~/bootstrap/dist/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="~/bootstrap/dist/css/bootstrap-theme.css" type="text/css" />
+  <script src="~/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="~/bootstrap/js/tests/vendor/jquery.min.js"></script>
+  <script src="~/bootstrap/js/dropdown.js"></script>
+  <script src="~/bootstrap/js/tab.js"></script>
+  <link rel="stylesheet" href="~/Views/Shared/styles.css" type="text/css" />
+  @RenderSection("head", required: false)
+</head>
+<body>
+  <header>
+    <div class="row">
+      <div class="col-md-4">
+        <h1>e-Mensa</h1>
+      </div>
+      <div class="col-md-4">
+        <ul class="nav nav-pills">
+          <li role="presentation">@Html.ActionLink("Start", "Index", "Start")</li>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Produkte <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>@Html.ActionLink("Alle Speisen", "Produkte", "Start")</li>
+              <li class="divider" role="separator"></li>
+              @{
+                  var liste = webshop.Models.Produkt.GetLayoutLinks();
+                  foreach (var l in liste)
+                  {
+                      <li>@Html.ActionLink(l.Name, "Details", "Start", new { id = l.Id }, null)</li>
+                  }
+              }
+            </ul>
+          </li>
+          <li role="presentation"><a href="https://www.fh-aachen.de/" target="_blank">FH Aachen</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        @{
+          var wkorb = new webshop.Models.WKorb();
+          if (wkorb.IstVorhanden())
+          {
+            @Html.ActionLink("Warenkorb", "Wkorb", "Start")
+            <span class="badge">@wkorb.GetAnzahlElemente()</span>
+          }
+        }        
+      </div>
+
+      <div class="col-md-4" id="searchbar">
+        <form action="http://www.google.de/search" method="get" target="_blank">
+          <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
+          <input type="search" name="q" placeholder="FH Suche" />
+          <input type="hidden" name="as_sitesearch" value="www.fh-aachen.de" />
+        </form>
+      </div>
+    </div>
+  </header>
+  @RenderBody()
+  <footer>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="list-group">
+          <ul class="list-inline navlinks">
+            <li>@Html.ActionLink("Login", "Index", "Login")</li>
+            <li>@Html.ActionLink("Registrieren", "Register", "Admin")</li>
+            <li>@Html.ActionLink("Impressum", "Impressum", "Start")</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 navlinks">
+        <span>@($"{DateTime.Now.Day}.{DateTime.Now.Month}.{DateTime.Now.Year}")</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

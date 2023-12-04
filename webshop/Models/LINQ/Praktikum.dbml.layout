@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17.5, 18.625" name="Praktikum">
+  <DataContextMoniker Name="/PraktikumDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6bc96e63-16c4-40b9-8594-b71c601f8428" absoluteBounds="12, 7.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/PraktikumDataContext/Befreundet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e8596c5-6c8a-4a46-af6f-04cbc484cb77" absoluteBounds="12.015, 8.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41d694c5-dbd4-46ab-b15c-a1ade503af22" absoluteBounds="6.25, 2, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/PraktikumDataContext/Zutat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8eb23a25-7590-43b2-ae91-3098de4fa81c" absoluteBounds="6.265, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="63af7cf4-eed4-4d2d-bd26-0cff78ec4579" absoluteBounds="6.5, 9.625, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/PraktikumDataContext/BE_Nutzer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1812d6d-a1ae-46d2-84ba-fa8745329685" absoluteBounds="6.515, 10.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="891423c2-0536-4a7c-950e-d220194e3fc6" absoluteBounds="9.25, 15.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/PraktikumDataContext/Bewertung" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b5b40cc-a738-4024-909e-45c399971785" absoluteBounds="9.265, 16.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60afc134-d696-44ea-b662-7972bc3190a1" absoluteBounds="0.75, 4.625, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/PraktikumDataContext/Bild" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ddbc72c-abec-492c-b84d-9f5f66f87cdf" absoluteBounds="0.765, 5.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06122304-cf13-4350-8226-ae51c228c91c" absoluteBounds="9.25, 9.625, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/PraktikumDataContext/FE_Nutzer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28d3c9f0-9af4-49ff-a009-117fc7793c8d" absoluteBounds="9.265, 10.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56334e12-7747-4885-b25a-6405ab0760ba" absoluteBounds="9.25, 13.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PraktikumDataContext/FH_Angehörige" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93b79cab-c366-40f5-bf70-39fd347a6704" absoluteBounds="9.265, 13.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6281ed2c-2f4a-42ff-9be9-bb43b5c042b1" absoluteBounds="12, 9.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PraktikumDataContext/Gast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="794e3c85-d940-4ac7-b0bb-4705dc5fc8b1" absoluteBounds="12.015, 10.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dbffd956-91a4-4d7f-961a-4104846e881d" absoluteBounds="15.25, 10, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/PraktikumDataContext/hatRechte" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ddbc71b6-ac9f-476c-b61a-1cdcf486536c" absoluteBounds="15.265, 10.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="565cca72-b0c5-486c-bd63-cfc01be738b6" absoluteBounds="9, 3.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/PraktikumDataContext/hatZutat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54997543-6168-40ed-9814-47f720ae14e0" absoluteBounds="9.015, 4.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="955f7607-7fd9-42b7-a206-a9517fab81ce" absoluteBounds="3.5, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PraktikumDataContext/Kategorie" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74aaad12-b070-4819-a9bc-28559174893b" absoluteBounds="3.515, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="643490bf-ba03-41e1-9bf5-31bb395795f8" absoluteBounds="12, 1.625, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/PraktikumDataContext/Kauft" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89051ec6-4df5-42d5-be53-679c0094f3e3" absoluteBounds="12.015, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b978bb86-4caf-4940-b291-d268b013ce3a" absoluteBounds="12, 12.5, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/PraktikumDataContext/Mitarbeiter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ce464b6-3b21-43f5-b0de-a516ad7b171d" absoluteBounds="12.015, 12.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1efb2071-0727-4397-8a22-3c745f255d8f" absoluteBounds="9, 6.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PraktikumDataContext/Preis" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87109bda-da33-4cc8-b7dc-cdf3aa2a36da" absoluteBounds="9.015, 7.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c56d3b2d-f7a9-40bc-a8e9-1c3e321eef52" absoluteBounds="6.25, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PraktikumDataContext/Produkt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80c941ea-60c7-4aca-97fc-19e2f6d556da" absoluteBounds="6.265, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="977eb002-9f5f-4943-bafd-8f24e16b5279" absoluteBounds="12.5, 17.125, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/PraktikumDataContext/Rechte" />
+      <nestedChildShapes>
+        <elementListCompartment Id="247374bc-1c2c-4b03-a8eb-f98bf0bfabee" absoluteBounds="12.515, 17.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65442f94-bb15-4051-9521-55f69c7952a7" absoluteBounds="12, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/PraktikumDataContext/Schreibt" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb76ecde-38fe-4f79-87a9-1f5d059b3314" absoluteBounds="12.015, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="017e8730-b052-4584-a0bc-e1947eb01d78" absoluteBounds="12, 14.625, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/PraktikumDataContext/Student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a4906bb-7248-44a8-8da8-c6e9c0ca51fb" absoluteBounds="12.015, 15.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4add023f-cdfe-4c57-aad5-2dabf79fe789" absoluteBounds="9.25, 1, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/PraktikumDataContext/Zahlung" />
+      <nestedChildShapes>
+        <elementListCompartment Id="03162223-17b8-4af2-9fcd-6e56d7c312ec" absoluteBounds="9.265, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.5 : 11.9728011067708); (7.5 : 16.7604484049479); (9.25 : 16.7604484049479)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/BE_Nutzer/BE_Nutzer_Bewertung" />
+      <nodes>
+        <classShapeMoniker Id="63af7cf4-eed4-4d2d-bd26-0cff78ec4579" />
+        <classShapeMoniker Id="891423c2-0536-4a7c-950e-d220194e3fc6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.15625 : 9.625); (11.15625 : 8.7925439453125); (11.5416666666667 : 8.7925439453125 : JumpStart); (11.9270833333333 : 8.7925439453125 : JumpEnd); (12 : 8.7925439453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FE_Nutzer/FE_Nutzer_Befreundet" />
+      <nodes>
+        <classShapeMoniker Id="06122304-cf13-4350-8226-ae51c228c91c" />
+        <classShapeMoniker Id="6bc96e63-16c4-40b9-8594-b71c601f8428" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.1875025 : 9.625); (11.1875025 : 8.96202072916667); (11.5416666666667 : 8.96202072916667 : JumpStart); (11.9270833333333 : 8.96202072916667 : JumpEnd); (12 : 8.96202072916667)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FE_Nutzer/FE_Nutzer_Befreundet1" />
+      <nodes>
+        <classShapeMoniker Id="06122304-cf13-4350-8226-ae51c228c91c" />
+        <classShapeMoniker Id="6bc96e63-16c4-40b9-8594-b71c601f8428" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 10.7989005533854); (9.25 : 10.7989005533854)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/BE_Nutzer/BE_Nutzer_FE_Nutzer" />
+      <nodes>
+        <classShapeMoniker Id="63af7cf4-eed4-4d2d-bd26-0cff78ec4579" />
+        <classShapeMoniker Id="06122304-cf13-4350-8226-ae51c228c91c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.25 : 11.9728011067708); (10.25 : 13.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FE_Nutzer/FE_Nutzer_FH_Angehörige" />
+      <nodes>
+        <classShapeMoniker Id="06122304-cf13-4350-8226-ae51c228c91c" />
+        <classShapeMoniker Id="56334e12-7747-4885-b25a-6405ab0760ba" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 10.5392976888021); (11.6041666666667 : 10.5392976888021 : JumpStart); (11.9270833333333 : 10.5392976888021 : JumpEnd); (12 : 10.5392976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FE_Nutzer/FE_Nutzer_Gast" />
+      <nodes>
+        <classShapeMoniker Id="06122304-cf13-4350-8226-ae51c228c91c" />
+        <classShapeMoniker Id="6281ed2c-2f4a-42ff-9be9-bb43b5c042b1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 9.625); (7.5 : 9.375); (11.0729166666667 : 9.375 : JumpStart); (11.2708358333333 : 9.375 : JumpEnd); (11.4166666666667 : 9.375 : JumpStart); (11.5833333333333 : 9.375 : JumpEnd); (11.6041666666667 : 9.375 : JumpStart); (11.9270833333333 : 9.375 : JumpEnd); (14.875 : 9.375); (14.875 : 10.6931469726562); (15.25 : 10.6931469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/BE_Nutzer/BE_Nutzer_hatRechte" />
+      <nodes>
+        <classShapeMoniker Id="63af7cf4-eed4-4d2d-bd26-0cff78ec4579" />
+        <classShapeMoniker Id="dbffd956-91a4-4d7f-961a-4104846e881d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.01369466145833); (9.09375 : 3.01369466145833); (9.09375 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Zutat/Zutat_hatZutat" />
+      <nodes>
+        <classShapeMoniker Id="41d694c5-dbd4-46ab-b15c-a1ade503af22" />
+        <classShapeMoniker Id="565cca72-b0c5-486c-bd63-cfc01be738b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.53929768880208); (3.5 : 5.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Bild/Bild_Kategorie" />
+      <nodes>
+        <classShapeMoniker Id="60afc134-d696-44ea-b662-7972bc3190a1" />
+        <classShapeMoniker Id="955f7607-7fd9-42b7-a206-a9517fab81ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.20242346379207 : 6.32859537760417); (4.20242346379207 : 6.57859537760417); (4.81174684745593 : 6.57859537760417); (4.81174684745593 : 6.32859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PraktikumDataContext/Kategorie/Kategorie_Kategorie" />
+      <nodes>
+        <classShapeMoniker Id="955f7607-7fd9-42b7-a206-a9517fab81ce" />
+        <classShapeMoniker Id="955f7607-7fd9-42b7-a206-a9517fab81ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 9.625); (11.625 : 9.25); (11.625 : 2.51044840494792); (12 : 2.51044840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FE_Nutzer/FE_Nutzer_Kauft" />
+      <nodes>
+        <classShapeMoniker Id="06122304-cf13-4350-8226-ae51c228c91c" />
+        <classShapeMoniker Id="643490bf-ba03-41e1-9bf5-31bb395795f8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 13.6931469726562); (11.6041666666667 : 13.6931469726562 : JumpStart); (11.7708333333333 : 13.6931469726562 : JumpEnd); (12 : 13.6931469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FH_Angehörige/FH_Angehörige_Mitarbeiter" />
+      <nodes>
+        <classShapeMoniker Id="56334e12-7747-4885-b25a-6405ab0760ba" />
+        <classShapeMoniker Id="b978bb86-4caf-4940-b291-d268b013ce3a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.88064697265625); (9 : 4.88064697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Produkt/Produkt_hatZutat" />
+      <nodes>
+        <classShapeMoniker Id="c56d3b2d-f7a9-40bc-a8e9-1c3e321eef52" />
+        <classShapeMoniker Id="565cca72-b0c5-486c-bd63-cfc01be738b6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.98964630989583); (11.5416666666667 : 5.98964630989583 : JumpStart); (11.7083333333333 : 5.98964630989583 : JumpEnd); (11.75 : 5.98964630989583); (11.75 : 4.5); (13 : 4.5); (13 : 3.39589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Produkt/Produkt_Kauft" />
+      <nodes>
+        <classShapeMoniker Id="c56d3b2d-f7a9-40bc-a8e9-1c3e321eef52" />
+        <classShapeMoniker Id="643490bf-ba03-41e1-9bf5-31bb395795f8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.25 : 6.65549967447917); (7.25 : 7.66429768880208); (9 : 7.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Produkt/Produkt_Preis" />
+      <nodes>
+        <classShapeMoniker Id="c56d3b2d-f7a9-40bc-a8e9-1c3e321eef52" />
+        <classShapeMoniker Id="1efb2071-0727-4397-8a22-3c745f255d8f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.65625); (6.25 : 4.65625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Bild/Bild_Produkt" />
+      <nodes>
+        <classShapeMoniker Id="60afc134-d696-44ea-b662-7972bc3190a1" />
+        <classShapeMoniker Id="c56d3b2d-f7a9-40bc-a8e9-1c3e321eef52" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.53929768880208); (6.25 : 5.53929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Kategorie/Kategorie_Produkt" />
+      <nodes>
+        <classShapeMoniker Id="955f7607-7fd9-42b7-a206-a9517fab81ce" />
+        <classShapeMoniker Id="c56d3b2d-f7a9-40bc-a8e9-1c3e321eef52" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14.5 : 17.7219962565104); (16.25 : 17.7219962565104); (16.25 : 11.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Rechte/Rechte_hatRechte" />
+      <nodes>
+        <classShapeMoniker Id="977eb002-9f5f-4943-bafd-8f24e16b5279" />
+        <classShapeMoniker Id="dbffd956-91a4-4d7f-961a-4104846e881d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 15.9362992741887); (11.6875 : 15.4987992741887); (11.6875 : 5.36982365494792); (12 : 5.36982365494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Bewertung/Bewertung_Schreibt" />
+      <nodes>
+        <classShapeMoniker Id="891423c2-0536-4a7c-950e-d220194e3fc6" />
+        <classShapeMoniker Id="65442f94-bb15-4051-9521-55f69c7952a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 13.5303566034155); (11.6285744349011 : 13.1517821685143 : JumpStart); (11.7464255650989 : 13.0339310383166 : JumpEnd); (11.84375 : 12.9366066034155); (11.84375 : 5.71098748242188); (12 : 5.71098748242188)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FH_Angehörige/FH_Angehörige_Schreibt" />
+      <nodes>
+        <classShapeMoniker Id="56334e12-7747-4885-b25a-6405ab0760ba" />
+        <classShapeMoniker Id="65442f94-bb15-4051-9521-55f69c7952a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 6.22162084375); (11.5416666666667 : 6.22162084375 : JumpStart); (11.9270833333333 : 6.22162084375 : JumpEnd); (12 : 6.22162084375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Produkt/Produkt_Schreibt" />
+      <nodes>
+        <classShapeMoniker Id="c56d3b2d-f7a9-40bc-a8e9-1c3e321eef52" />
+        <classShapeMoniker Id="65442f94-bb15-4051-9521-55f69c7952a7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 14.8517976888021); (11.6041666666667 : 14.8517976888021 : JumpStart); (11.7708333333333 : 14.8517976888021 : JumpEnd); (12 : 14.8517976888021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/FH_Angehörige/FH_Angehörige_Student" />
+      <nodes>
+        <classShapeMoniker Id="56334e12-7747-4885-b25a-6405ab0760ba" />
+        <classShapeMoniker Id="017e8730-b052-4584-a0bc-e1947eb01d78" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 2.00522420247396); (12 : 2.00522420247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PraktikumDataContext/Zahlung/Zahlung_Kauft" />
+      <nodes>
+        <classShapeMoniker Id="4add023f-cdfe-4c57-aad5-2dabf79fe789" />
+        <classShapeMoniker Id="643490bf-ba03-41e1-9bf5-31bb395795f8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
